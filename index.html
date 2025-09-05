@@ -80,6 +80,22 @@
             width: 100%;
         }
         
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #2E7D32;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #2E7D32 0%, #0288D1 50%, #4CAF50 100%);
@@ -156,6 +172,7 @@
             position: absolute;
             opacity: 0.1;
             animation: float 6s ease-in-out infinite;
+            font-size: 3em;
         }
         
         .floating-element:nth-child(1) {
@@ -216,10 +233,88 @@
             line-height: 1.8;
         }
         
+        /* About Section */
+        .about {
+            padding: 100px 20px;
+            background: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5em;
+            color: #2E7D32;
+            margin-bottom: 30px;
+        }
+        
+        .about-text p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .about-features {
+            list-style: none;
+            margin-top: 30px;
+        }
+        
+        .about-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            color: #666;
+        }
+        
+        .about-features li:before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .about-image {
+            background: linear-gradient(135deg, #E8F5E8, #F0F8FF);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .stat-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .stat-box .number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2E7D32;
+        }
+        
+        .stat-box .label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        
         /* Focus Areas */
         .focus-areas {
             padding: 100px 20px;
-            background: white;
+            background: #f8f9fa;
         }
         
         .areas-grid {
@@ -292,6 +387,66 @@
             line-height: 1.6;
         }
         
+        /* Projects Section */
+        .projects {
+            padding: 100px 20px;
+            background: white;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .project-image {
+            height: 200px;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3em;
+        }
+        
+        .project-content {
+            padding: 25px;
+        }
+        
+        .project-content h3 {
+            color: #2E7D32;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .project-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9em;
+            color: #999;
+        }
+        
         /* Stats Section */
         .stats {
             padding: 80px 20px;
@@ -324,6 +479,63 @@
         .stat-label {
             font-size: 1.1em;
             opacity: 0.9;
+        }
+        
+        /* Team Section */
+        .team {
+            padding: 100px 20px;
+            background: #f8f9fa;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .team-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+        }
+        
+        .team-card h3 {
+            color: #2E7D32;
+            margin-bottom: 10px;
+        }
+        
+        .team-role {
+            color: #0288D1;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .team-card p {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.6;
         }
         
         /* Call to Action */
@@ -359,6 +571,9 @@
             font-weight: bold;
             transition: all 0.3s ease;
             display: inline-block;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
         }
         
         .btn-primary {
@@ -382,6 +597,103 @@
             background: white;
             color: #0288D1;
             transform: translateY(-3px);
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 40px;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 500px;
+            position: relative;
+            animation: slideIn 0.3s ease;
+        }
+        
+        .close {
+            color: #999;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+        
+        .close:hover {
+            color: #333;
+        }
+        
+        .modal h2 {
+            color: #2E7D32;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .form-submit {
+            background: linear-gradient(45deg, #4CAF50, #2E7D32);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
         /* Footer */
@@ -461,6 +773,22 @@
             }
         }
         
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -475,6 +803,10 @@
                 display: none;
             }
             
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
             .section-title {
                 font-size: 2em;
             }
@@ -482,6 +814,17 @@
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .modal-content {
+                width: 95%;
+                margin: 5% auto;
+                padding: 20px;
             }
         }
         
@@ -496,6 +839,17 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* Success message */
+        .success-message {
+            background: linear-gradient(45deg, #4CAF50, #2E7D32);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -505,11 +859,19 @@
             <a href="#" class="logo">🌟 Успех за всеки</a>
             <ul class="nav-links">
                 <li><a href="#home">Начало</a></li>
+                <li><a href="#about">За нас</a></li>
                 <li><a href="#mission">Мисия</a></li>
                 <li><a href="#focus">Дейности</a></li>
+                <li><a href="#projects">Проекти</a></li>
+                <li><a href="#team">Екип</a></li>
                 <li><a href="#contact">Контакти</a></li>
                 <li><a href="#join">Присъедини се</a></li>
             </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -523,10 +885,57 @@
             <h1>Успех за всеки</h1>
             <p class="subtitle">Неправителствена организация за развитие на младите</p>
             <p class="description">
-                Подкрепяме личностното, образователното и социалното развитие на деца и младежи, 
+                Подкрепяме личностното, образователното и социално развитие на деца и младежи, 
                 насърчавайки ги към активност, отговорност и съзнателно участие в обществото.
             </p>
             <a href="#join" class="cta-button">Присъедини се към нас</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <h2>За нашата организация</h2>
+                    <p>
+                        Сдружение "Успех за всеки" е регистрирана неправителствена организация, основана през 2019 година 
+                        с мисията да подкрепя развитието на деца и младежи в България.
+                    </p>
+                    <p>
+                        Работим с ученици от 1-ви до 12-ти клас, техните семейства, учители и местните общности, 
+                        създавайки програми и проекти, които:
+                    </p>
+                    <ul class="about-features">
+                        <li>Развиват личностни умения и социални компетенции</li>
+                        <li>Подкрепят образователните постижения</li>
+                        <li>Насърчават екологичното съзнание</li>
+                        <li>Включват деца от уязвими групи</li>
+                        <li>Популяризират здравословния начин на живот</li>
+                        <li>Развиват творческите способности</li>
+                    </ul>
+                </div>
+                <div class="about-image animate-on-scroll">
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <div class="number">500+</div>
+                            <div class="label">Деца и младежи</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">25+</div>
+                            <div class="label">Проекта</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">15+</div>
+                            <div class="label">Партньорства</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">5</div>
+                            <div class="label">Години опит</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -575,6 +984,87 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Нашите проекти</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">🌍</div>
+                    <div class="project-content">
+                        <h3>Еко градина</h3>
+                        <p>Създаване на градинки в училищни дворове с участието на ученици, родители и учители. Учим децата как да отглеждат растения и да се грижат за природата.</p>
+                        <div class="project-meta">
+                            <span>📅 2023-2024</span>
+                            <span>👥 150 участници</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">📖</div>
+                    <div class="project-content">
+                        <h3>Четем заедно</h3>
+                        <p>Програма за насърчаване на четенето сред деца и младежи чрез интерактивни сесии, книжни клубове и срещи с автори.</p>
+                        <div class="project-meta">
+                            <span>📅 2022-2024</span>
+                            <span>👥 200 участници</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">🏃</div>
+                    <div class="project-content">
+                        <h3>Активни и здрави</h3>
+                        <p>Спортни активности, турнири и образователни програми за здравословен начин на живот и важността на физическата активност.</p>
+                        <div class="project-meta">
+                            <span>📅 2023-2024</span>
+                            <span>👥 180 участници</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">🎨</div>
+                    <div class="project-content">
+                        <h3>Творчески таланти</h3>
+                        <p>Работилници по изобразително изкуство, музика, танци и театър. Откриваме и развиваме творческия потенциал на младите.</p>
+                        <div class="project-meta">
+                            <span>📅 2023-2024</span>
+                            <span>👥 120 участници</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">💻</div>
+                    <div class="project-content">
+                        <h3>Дигитални умения</h3>
+                        <p>Обучения по компютърна грамотност, програмиране и безопасност в интернет за деца и възрастни.</p>
+                        <div class="project-meta">
+                            <span>📅 2024</span>
+                            <span>👥 90 участници</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">🏠</div>
+                    <div class="project-content">
+                        <h3>Подкрепа за семейства</h3>
+                        <p>Консултации, работилници за родители и програми за укрепване на семейните връзки в трудни ситуации.</p>
+                        <div class="project-meta">
+                            <span>📅 2022-2024</span>
+                            <span>👥 75 семейства</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Stats Section -->
     <section class="stats">
         <div class="container">
@@ -599,6 +1089,43 @@
         </div>
     </section>
 
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Нашият екип</h2>
+            
+            <div class="team-grid">
+                <div class="team-card animate-on-scroll">
+                    <div class="team-avatar">👩‍💼</div>
+                    <h3>Мария Петрова</h3>
+                    <div class="team-role">Председател</div>
+                    <p>Магистър по социална работа с 10 години опит в областта на младежките политики и социалните услуги.</p>
+                </div>
+                
+                <div class="team-card animate-on-scroll">
+                    <div class="team-avatar">👨‍🏫</div>
+                    <h3>Петър Иванов</h3>
+                    <div class="team-role">Програмен директор</div>
+                    <p>Педагог с богат опит в образователни проекти и специализация в работата с деца в неравностойно положение.</p>
+                </div>
+                
+                <div class="team-card animate-on-scroll">
+                    <div class="team-avatar">👩‍🎨</div>
+                    <h3>Елена Георгиева</h3>
+                    <div class="team-role">Координатор творчески дейности</div>
+                    <p>Художничка и арт-терапевт, работи по програми за развитие на творческите способности при децата.</p>
+                </div>
+                
+                <div class="team-card animate-on-scroll">
+                    <div class="team-avatar">👨‍💻</div>
+                    <h3>Николай Стоянов</h3>
+                    <div class="team-role">IT специалист</div>
+                    <p>Компютърен специалист и ментор в програми за дигитални умения и технологично образование.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Call to Action -->
     <section id="join" class="cta-section">
         <div class="container">
@@ -606,8 +1133,8 @@
                 <h2>Присъедини се към промяната!</h2>
                 <p>Заедно можем да направим разликата в живота на младите хора. Твоята подкрепа е важна за нас.</p>
                 <div class="cta-buttons">
-                    <a href="#" class="btn-primary">Стани доброволец</a>
-                    <a href="#" class="btn-secondary">Направи дарение</a>
+                    <button class="btn-primary" onclick="openVolunteerModal()">Стани доброволец</button>
+                    <button class="btn-secondary" onclick="openDonationModal()">Направи дарение</button>
                 </div>
             </div>
         </div>
@@ -620,33 +1147,38 @@
                 <div class="footer-section">
                     <h3>За контакт</h3>
                     <p>📧 info@uspeh-za-vseki.bg</p>
-                    <p>📞 +359 XXX XXX XXX</p>
-                    <p>📍 София, България</p>
+                    <p>📞 +359 888 123 456</p>
+                    <p>📍 бул. "Витоша" 123, София, България</p>
+                    <p>🕒 Пон-Пет: 9:00-17:00</p>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Бързи връзки</h3>
                     <ul>
-                        <li><a href="#">За нас</a></li>
-                        <li><a href="#">Проекти</a></li>
-                        <li><a href="#">Доброволчество</a></li>
-                        <li><a href="#">Дарения</a></li>
+                        <li><a href="#about">За нас</a></li>
+                        <li><a href="#projects">Проекти</a></li>
+                        <li><a href="#" onclick="openVolunteerModal()">Доброволчество</a></li>
+                        <li><a href="#" onclick="openDonationModal()">Дарения</a></li>
+                        <li><a href="#team">Екип</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Последвай ни</h3>
                     <ul>
-                        <li><a href="#">📘 Facebook</a></li>
-                        <li><a href="#">📷 Instagram</a></li>
-                        <li><a href="#">🐦 Twitter</a></li>
-                        <li><a href="#">💼 LinkedIn</a></li>
+                        <li><a href="https://facebook.com" target="_blank">📘 Facebook</a></li>
+                        <li><a href="https://instagram.com" target="_blank">📷 Instagram</a></li>
+                        <li><a href="https://twitter.com" target="_blank">🐦 Twitter</a></li>
+                        <li><a href="https://linkedin.com" target="_blank">💼 LinkedIn</a></li>
+                        <li><a href="https://youtube.com" target="_blank">📺 YouTube</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Информация</h3>
                     <p>Сдружение "Успех за всеки" е регистрирана НПО, работеща за подкрепа на младите хора в България.</p>
+                    <p><strong>Булстат:</strong> 123456789</p>
+                    <p><strong>Банкова сметка:</strong><br>BG12 UNCR 7000 1234 5678</p>
                 </div>
             </div>
             
@@ -655,6 +1187,114 @@
             </div>
         </div>
     </footer>
+
+    <!-- Volunteer Modal -->
+    <div id="volunteerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('volunteerModal')">&times;</span>
+            <h2>Стани доброволец</h2>
+            <form id="volunteerForm">
+                <div class="form-group">
+                    <label for="volunteer-name">Име и фамилия *</label>
+                    <input type="text" id="volunteer-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="volunteer-email">Имейл *</label>
+                    <input type="email" id="volunteer-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="volunteer-phone">Телефон</label>
+                    <input type="tel" id="volunteer-phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="volunteer-age">Възраст</label>
+                    <select id="volunteer-age" name="age">
+                        <option value="">Избери възрастова група</option>
+                        <option value="16-18">16-18 години</option>
+                        <option value="19-25">19-25 години</option>
+                        <option value="26-35">26-35 години</option>
+                        <option value="36-50">36-50 години</option>
+                        <option value="50+">Над 50 години</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="volunteer-skills">Умения и интереси</label>
+                    <textarea id="volunteer-skills" name="skills" placeholder="Опиши накратко своите умения, интереси и в кои дейности би искал/а да участваш"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="volunteer-time">Свободно време</label>
+                    <select id="volunteer-time" name="time">
+                        <option value="">Колко време можеш да отделяш?</option>
+                        <option value="1-2h-week">1-2 часа седмично</option>
+                        <option value="3-5h-week">3-5 часа седмично</option>
+                        <option value="weekend">Уикенди</option>
+                        <option value="events">Само при събития</option>
+                        <option value="flexible">Гъвкаво време</option>
+                    </select>
+                </div>
+                <button type="submit" class="form-submit">Изпрати кандидатура</button>
+                <div id="volunteer-success" class="success-message">
+                    Благодарим ти! Ще се свържем с теб скоро.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Donation Modal -->
+    <div id="donationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('donationModal')">&times;</span>
+            <h2>Направи дарение</h2>
+            <form id="donationForm">
+                <div class="form-group">
+                    <label for="donation-name">Име и фамилия *</label>
+                    <input type="text" id="donation-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="donation-email">Имейл *</label>
+                    <input type="email" id="donation-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="donation-amount">Сума на дарението</label>
+                    <select id="donation-amount" name="amount">
+                        <option value="">Избери сума</option>
+                        <option value="10">10 лв</option>
+                        <option value="25">25 лв</option>
+                        <option value="50">50 лв</option>
+                        <option value="100">100 лв</option>
+                        <option value="other">Друга сума</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="donation-purpose">За какво да бъде използвано дарението?</label>
+                    <select id="donation-purpose" name="purpose">
+                        <option value="">Избери предназначение</option>
+                        <option value="general">Общи дейности</option>
+                        <option value="education">Образователни програми</option>
+                        <option value="ecology">Екологични проекти</option>
+                        <option value="sports">Спортни дейности</option>
+                        <option value="culture">Културни инициативи</option>
+                        <option value="support">Подкрепа за семейства в нужда</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="donation-message">Съобщение (по желание)</label>
+                    <textarea id="donation-message" name="message" placeholder="Споделете защо решихте да подкрепите нашата кауза"></textarea>
+                </div>
+                <div style="background: #f0f8ff; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                    <strong>Банкови данни:</strong><br>
+                    Сдружение "Успех за всеки"<br>
+                    IBAN: BG12 UNCR 7000 1234 5678<br>
+                    БИК: UNCRBGSF<br>
+                    Банка: УниКредит Булбанк
+                </div>
+                <button type="submit" class="form-submit">Потвърди дарението</button>
+                <div id="donation-success" class="success-message">
+                    Благодарим за вашето дарение! Ще получите имейл с инструкции.
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script>
         // Scroll animations
@@ -735,6 +1375,95 @@
                 header.style.background = 'rgba(255, 255, 255, 0.95)';
                 header.style.boxShadow = 'none';
             }
+        });
+
+        // Modal functions
+        function openVolunteerModal() {
+            document.getElementById('volunteerModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openDonationModal() {
+            document.getElementById('donationModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            const volunteerModal = document.getElementById('volunteerModal');
+            const donationModal = document.getElementById('donationModal');
+            
+            if (event.target === volunteerModal) {
+                closeModal('volunteerModal');
+            }
+            if (event.target === donationModal) {
+                closeModal('donationModal');
+            }
+        });
+
+        // Form submissions
+        document.getElementById('volunteerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            setTimeout(() => {
+                document.getElementById('volunteer-success').style.display = 'block';
+                this.reset();
+                
+                setTimeout(() => {
+                    closeModal('volunteerModal');
+                    document.getElementById('volunteer-success').style.display = 'none';
+                }, 2000);
+            }, 500);
+        });
+
+        document.getElementById('donationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            setTimeout(() => {
+                document.getElementById('donation-success').style.display = 'block';
+                this.reset();
+                
+                setTimeout(() => {
+                    closeModal('donationModal');
+                    document.getElementById('donation-success').style.display = 'none';
+                }, 2000);
+            }, 500);
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal('volunteerModal');
+                closeModal('donationModal');
+            }
+        });
+
+        // Enhance accessibility
+        document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
+            button.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+
+        // Add loading animation on page load
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
         });
     </script>
 </body>
